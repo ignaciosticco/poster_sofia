@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Script para compilar poster2010.tex en un solo paso.
+# El script abre poster2010.pdf para visualizarlo.
+#
+# Usarlo escribiendo ./makepdf
+
+
+latex poster2010.tex
+latex poster2010.tex
+dvips poster2010.dvi
+
+rm poster2010.aux poster2010.log
+
+ps2pdf poster2010.ps
+ggv poster2010.pdf
+
+
+

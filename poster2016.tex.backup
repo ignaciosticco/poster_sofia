@@ -1,0 +1,386 @@
+\documentclass[final]{baposter}
+
+%
+% Para compilar: latex  poster2010.tex (dos veces)
+%                dvips  poster2010.dvi
+%                ps2pdf poster2010.ps 
+%
+%                (no funciona con pdflatex ni con dvipdfm!!!)
+%
+
+\usepackage{times}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{bm}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{pgfbaselayers}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\usepackage{helvet}
+%\usepackage{bookman}
+\usepackage{palatino}
+
+\newcommand{\captionfont}{\footnotesize}
+
+\selectcolormodel{cmyk}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Some math symbols used in the text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Format 
+\newcommand{\Matrix}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\Vector}[1]{\Matrix{#1}}
+\newcommand*{\SET}[1]  {\ensuremath{\mathcal{#1}}}
+\newcommand*{\MAT}[1]  {\ensuremath{\mathbf{#1}}}
+\newcommand*{\VEC}[1]  {\ensuremath{\bm{#1}}}
+\newcommand*{\CONST}[1]{\ensuremath{\mathit{#1}}}
+\newcommand*{\norm}[1]{\mathopen\| #1 \mathclose\|}% use instead of $\|x\|$
+\newcommand*{\abs}[1]{\mathopen| #1 \mathclose|}% use instead of $\|x\|$
+\newcommand*{\absLR}[1]{\left| #1 \right|}% use instead of $\|x\|$
+
+\def\norm#1{\mathopen\| #1 \mathclose\|}% use instead of $\|x\|$
+\newcommand{\normLR}[1]{\left\| #1 \right\|}% use instead of $\|x\|$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Multicol Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\columnsep}{0.7em}
+\setlength{\columnseprule}{0mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Save space in lists. Use this after the opening of the list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{%
+\setlength{\itemsep}{1pt}%
+\setlength{\parskip}{0pt}%
+\setlength{\parsep}{0pt}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Here starts the poster
+%%%---------------------------------------------------------------------------
+%%% Format it to your taste with the options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\typeout{Poster Starts}
+%\background{
+%  \begin{tikzpicture}[remember picture,overlay]%
+    %\draw (current page.north west)+(-2em,-0em) node[anchor=north west] {\hspace{-2em}\includegraphics[height=1.1\textheight]{silhouettes_background}};
+%  \end{tikzpicture}%
+%}
+
+% definidos por Guillermo Frank
+\definecolor{Blue}{cmyk}{1.,1.,0,0} 
+\definecolor{BlueViolet}{cmyk}{0.86,0.91,0,0.04} 
+\definecolor{RoyalBlue}{cmyk}{1.,0.50,0,0}
+\definecolor{SkyBlue}{cmyk}{0.62,0,0.12,0} 
+\definecolor{TealBlue}{cmyk}{0.86,0,0.34,0.02}
+\definecolor{CornflowerBlue}{cmyk}{0.65,0.13,0,0} 
+\definecolor{NavyBlue}{cmyk}{0.94,0.54,0,0}
+\definecolor{MidnightBlue}{cmyk}{0.98,0.13,0,0.43}
+%\definecolor{mylightblue}{cmyk}{0.1,0.1,0.1,0.0}
+\definecolor{mylightblue}{cmyk}{0.0,0.0,0.0,0.0}
+\definecolor{mydarkblue}{cmyk}{1.,1.,0,0.63}
+\definecolor{mylightgray}{cmyk}{0.19,0.15,0.01,0.5}
+
+\pagecolor{mylightblue}
+
+
+\begin{poster}{
+  % Show grid to help with alignment
+  grid=no,
+  % Column spacing
+  colspacing=1em,
+  % Color style
+  bgColorOne=mylightblue,                        
+  bgColorTwo=mylightblue,                        
+  borderColor=mylightgray,
+  %headerColorOne=mydarkblue,
+  %headerColorTwo=mydarkblue,
+  headerColorOne=olive!85!cyan,
+  headerColorTwo=olive!85!cyan,
+  headerFontColor=white,
+  boxColorOne=mylightblue,
+  boxColorTwo=mydarkblue,
+  % Format of textbox
+  textborder=roundedleft,
+  % Format of text header
+  eyecatcher=yes,
+  headerborder=open,
+  headerheight=0.08\textheight,
+  headershape=roundedright,
+  headershade=plain,
+  headerfont=\Large\textsf, %Sans Serif
+  boxshade=plain,
+  %background=shade-tb,
+  background=plain,
+  linewidth=2pt
+  }
+  % Eye Catcher
+  {\begin{minipage}{10em}
+    \vspace{7mm}
+    \hfill
+    \includegraphics[height=6.5em]{logo_fcen}
+    \vspace{5mm}
+    %\includegraphics[height=5.5em]{logo}
+  \end{minipage}} % No eye catcher for this poster. If an eye catcher is present, the title is centered between eye-catcher and logo.
+  % Title
+  {\sf %Sans Serif
+  %\bf% Serif
+  \textcolor{mydarkblue}{Din\'amica de peatones sometidos a altas presiones 
+durante una evacuaci\'on \\}
+\vspace{3mm}
+\textcolor{mydarkblue}{\Large Fernando Cornes, Guillermo Frank  \& 
+Claudio Dorso 
+{\large(codorso\textcolor{orange!90!black}{@}df.uba.ar)} }}
+% Abstract #300660, Poster Session 253 on Monday, 8/1/2011 beginning at 2:00 PM
+  % Authors
+  {\sf %Sans Serif
+  % Serif
+ % \textcolor{mydarkblue}{\\ \vspace{-3mm}\Large Guillermo Frank
+%{\large(frank\textcolor{red}{@}ieee.org)} \& Claudio Dorso 
+%{\large(codorso\textcolor{red}{@}df.uba.ar)} } \hspace{6.5em}\\
+    %\LARGE Guillermo A. Frank$^\textsf{1}$ - Claudio O. Dorso} \hspace{7.5em}
+    %\textcolor{mylightgray}{$^{\textsf{(1)}}\,$frank@ieee.org} \hspace{5.5em}
+    %\textcolor{mydarkblue}{\LARGE Universidad de Buenos Aires, Argentina}
+  }
+  % University logo
+  {{\begin{minipage}{7em}
+    \vspace{4mm}
+    \hfill
+    \includegraphics[height=5.5em]{uba3}
+    %\includegraphics[height=5.5em]{logo}
+  \end{minipage}}
+  }
+
+  %\tikzstyle{light shaded}=[top color=baposterBGtwo!30!white,bottom color=baposterBGone!30!white,shading=axis,shading angle=30]
+
+  % Width of left inset image
+     %\newlength{\leftimgwidth}
+     %\setlength{\leftimgwidth}{0.78em+8.0em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Now define the boxes that make up the poster
+%%%---------------------------------------------------------------------------
+%%% Each box has a name and can be placed absolutely or relatively.
+%%% The only inconvenience is that you can only specify a relative position 
+%%% towards an already declared box. So if you have a box attached to the 
+%%% bottom, one to the top and a third one which should be in between, you 
+%%% have to specify the top and bottom boxes before you specify the middle 
+%%% box.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %
+    % A coloured circle useful as a bullet with an adjustably strong filling
+    %\newcommand{\colouredcircle}[1]{%
+    %  \tikz{\useasboundingbox (-0.2em,-0.32em) rectangle(0.2em,0.32em); \draw[draw=black,fill=baposterBGone!80!black!#1!white,line width=0.03em] (0,0) circle(0.18em);}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Resumen}{name=contribution,column=0,span=3,row=0}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\large La din\'amica de peatones puede describirse siguiendo un modelo de 
+"fuerza social". En este modelo, cada individuo posee una "fuerza de deseo" 
+debida a su voluntad de ir en determinada direcci\'on, y una "fuerza social" que
+representa su reacci\'on a los est\'\i mulos del entorno. Ambas fuerzas 
+determinan la "presi\'on" a la que est\'a sometida la persona. En un escenario 
+de p\'anico, esta presi\'on puede ser da\~nina y provocar desmayos. En esta 
+investigaci\'on se analizan las consecuencias que tienen los individuos ca\'\i 
+dos sobre los tiempos de evacuaci\'on. Se observ\'o que, seg\'un el nivel de 
+ansiedad, es posible pasar de un r\'egimen de libre circulaci\'on, a un 
+r\'egimen de "canal angosto", hasta obtener un bloqueo completo de la v\'\i a de 
+salida. Los primeros afectados (ca\'\i dos) por las altas presiones
+parecen ser decisivos en r\'egimen de evacuaci\'on del resto del grupo. 
+ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{De qu\'e se 
+trata}{name=model,column=0,below=contribution,span=1.5}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  {\hspace*{3mm}
+  {\begin{minipage}{\textwidth}
+  \begin{minipage}{0.95\textwidth}
+    \vspace{0mm}
+    \begin{center}
+    \begin{tabular}{c@{}c@{}c}
+    %\hline
+   \textcolor{darkgray}{\bf(a)} & \textcolor{darkgray}{\bf(b)} & 
+\textcolor{darkgray}{\bf(c)} \\ 
+\includegraphics[scale=0.26]{./figures/fig1_canal_ancho_vd_7_it_10_paredes.eps}  
+& 
+    
+\includegraphics[scale=0.26]{./figures/fig1_canal_rapido_vd_7_it_7_paredes.eps}
+ &
+
+\includegraphics[scale=0.26]{./figures/fig1_bloqueo_puro_vd_7_it_9_paredes.eps}
+\\
+%\hline
+    \end{tabular}
+    \end{center}
+    {\large \bf \textcolor{darkgray}{Individuos escapando por una salida. En 
+rojo 
+se indican los ca\'\i dos. (a) se forma un canal ancho. (b) se forma un canal 
+angosto. (c) la salida se bloquea completamente. La velocidad de deseo es } 
+\textcolor{olive}{\large 
+\bf  $\mathbf{v_d=7\,}$m/s.}}\\ 
+  \end{minipage}
+  
+  
+  \begin{minipage}{\textwidth}
+    \vspace{0mm}
+   { \LARGE
+   \vspace{4mm}
+\textcolor{olive}{\bf\Large El 
+modelo social:} \hspace{7mm}
+$m\displaystyle\frac{d\mathbf{v}}{dt}=\mathbf{f}_d+\mathbf{f}_s+\mathbf{ f}_g$\\
+
+\vspace{3mm}
+{\Large \bf $\mathbf{f}_d$ \textcolor{darkgray}{es la fuerza de deseo,} 
+$\mathbf{f}_s$ \textcolor{darkgray}{es la fuerza social}\\ $\mathbf{f}_g$ 
+\textcolor{darkgray}{es la friccion}}
+}
+
+  \end{minipage}
+  \end{minipage}}
+  }
+
+  %\vspace*{-3mm}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{The 
+pressures}{name=topics,column=0,span=1.5,below=model,above=bottom}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large
+\vspace{0mm}
+   \begin{minipage}{0.3\textwidth}
+    \begin{center}
+     Separation distance of 1.5 m.
+     \end{center}
+    
+\includegraphics[scale=0.2]{./figures/fig1_canal_rapido_vd_7_it_7_paredes.eps}
+    \end{minipage}
+    \hspace{0mm}
+    \begin{minipage}{0.3\textwidth}
+    \begin{center}
+    Separation distance of 5 m.
+    \end{center}
+    
+\includegraphics[scale=0.2]{./figures/fig1_canal_angosto_vd_7_it_10_paredes.eps}
+    
+    \end{minipage}
+        \hspace{0mm}
+    \begin{minipage}{0.3\textwidth}
+    \begin{center}
+    Separation distance of 5 m.
+    \end{center}
+    
+\includegraphics[scale=0.2]{./figures/fig1_bloqueo_puro_vd_7_it_9_paredes.eps}
+    
+    \end{minipage}
+
+\vspace{-0.5mm}   
+Fig~1. Mean pressures computed from 30 evacuation processes. 
+$\,v_d=4\,$m/s. The scale bar on the right is expressed in N.m units.\\
+
+    
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Evacuation 
+Time}{name=results,below=contribution,column=1.5,span=1.5,row=0}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large
+
+
+  {{\begin{minipage}{\textwidth}
+    
+    \hspace{0mm}
+   
+    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=1.1]{./figures/fig1_version0.eps}
+    \end{minipage}
+    Fig~2.  
+    \end{minipage}
+    \hspace{-1mm}
+    \begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=1.1]{./figures/fig12_version0.eps}
+    \end{minipage}
+{Fig~2. Mean evacuation time for 225 pedestrians computed from 30 evacuation 
+processes. \textcolor{olive}{(Left)} $\triangle$ corresponds to 225 
+individuales,  $\Box$ corresponds to 584 individuals and  $\bigcirc$ corresponds 
+to 960 individuals ($v_d=4\,$m/s). \textcolor{olive}{(Right)} $\bigcirc$ 225 
+individuals and $v_d=4\,$m/s. $\Box$ 225 individuals and $v_d=8\,$m/s.}\\    
+    
+  \end{minipage}}
+  }
+
+
+
+  }%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{Conclusions}{name=questions,column=1.5,span=1.5,below=results}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large 
+
+\begin{itemize}
+\item[\textcolor{blue}{\checkmark}] Short separation distances ($d_g\simeq 
+1.2\,$m) worsen the evacuation performance for all the explored situations, 
+while larger distances ($d_g>1.2\,$m) enhances the evacuation time for 
+relatively small crowds and moderate anxiety levels.
+\item[\textcolor{blue}{\checkmark}]As the separation distance approaches 
+$1.2\,$m (from the null distance), the probability of having blocking 
+structures around each door raises, resembling the situation of two independent 
+doors.
+\item[\textcolor{blue}{\checkmark}] Increasing the crowd size ($N$) or the 
+pedestrian's anxiety level ($v_d$) slows down the evacuation. Both magnitudes 
+raise the pressure acting on the pedestrians.
+\end{itemize}
+
+  }%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\headerbox{Acknowledgements}{name=Reconocimientos,column=0,span=3,above=bottom,
+below=questions}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large  
+
+%\vspace{0.5mm}
+
+C.O. Dorso is a main researcher of the National Scientific  
+Technical Research Council (CONICET- Argentina). G. Frank is an assistant 
+researcher of the CONICET. I. Sticco has degree in Physics. 
+
+  }%
+
+\end{poster}%
+%
+
+
+
+\end{document}
